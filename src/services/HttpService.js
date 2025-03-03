@@ -8,7 +8,7 @@ const api = axios.create ({
 
 export async function getCharacters() {
     try {
-        const response = await api.get('characters');
+        const response = await api.get('character');
         return response.data
     } catch (error) {
         console.error('Erro ao obter personagens:', error);
