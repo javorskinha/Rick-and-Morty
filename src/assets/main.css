@@ -1,3 +1,16 @@
 @import './reset.css';
-@import './roots.css';
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
+:root {
+  --color-white: #ffffff;
+  --color-black: #000;
+  --color-drak-grey: #252525;
+  --color-medium-grey: #3C3C3C;
+  --color-grey: #515151;
+  --color-light-grey: #B5B5B5;
+  --color-light-green: #F0FFF0;
+
+
+  --font-header: "Rubik", sans-serif;
+  --font-main: "Source Sans 3", sans-serif;
+}

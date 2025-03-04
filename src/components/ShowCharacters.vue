@@ -27,6 +27,8 @@ import { getCharacters } from "@/services/HttpService.js";
     onMounted(getPersonagens);
 </script>
 
+<style scoped>
 
+</style>
 
 
