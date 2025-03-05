@@ -1,10 +1,14 @@
 <template id="app">
-  <HeaderComponent/>
-  <RouterView />
+  <div>
+    <HeaderComponent/>
+    <RouterView/>
+    <FooterComponent />
+  </div>
 </template>
 
 <script setup>
 import HeaderComponent from './components/HeaderComponent.vue';
+import FooterComponent from './components/FooterComponent.vue';
 </script>
 
 <style scoped>
