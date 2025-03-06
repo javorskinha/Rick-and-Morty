@@ -4,9 +4,8 @@
             <img :src="src" :alt="alt">
             <div>
                 <h2>{{ title }}</h2>
-                <p>{{ status }}</p>
-                <p>{{ species }}</p>
-                <p>{{ gender }}</p>
+                <p :class="styleClass">{{ status }}</p>
+                <p>{{ species }} / {{ gender }}</p>
                 <p>{{ origin }}</p>
             </div>
         </div>
@@ -14,7 +13,7 @@
 </template>
 
 <script setup>
-import { ref, defineProps } from 'vue';
+import { ref, defineProps, watch } from 'vue';
 
 const props = defineProps ({
     src: String,
@@ -25,24 +24,43 @@ const props = defineProps ({
     gender: String,
     origin: String
 })
+
+const styleClass = ref ('')
+
+watch (() => props.status, 
+    (newStatus) => {
+        if(newStatus === 'Alive'){
+            styleClass.value = 'alive'
+        } else if (newStatus === 'Dead'){
+            styleClass.value = 'dead'
+        } else {
+            styleClass.value = 'unknown'
+        }
+    },
+    {immediate: true}
+)
+
 </script>
 
 <style scoped>
     #card{
-        display: grid;
-        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1em auto;
+        width: 100%;
     }
 
     #card-content {
         display: flex;
         align-items: center;
         background-color: var(--color-grey);
-        width: 28em;
+        width: 30em;
         height: 15em;
         justify-content: space-around;
         border: solid 1px var(--color-drak-grey);
         border-radius: 10px;
-        box-shadow: 2em;
+        box-shadow: 2px 2px 10px var(--color-black);
     }
 
     #card img{
@@ -54,10 +72,27 @@ const props = defineProps ({
         font-family: var(--font-main);
         font-weight: 700;
         color: var(--color-light-green);
+        padding: 5px;
     }
 
     #card h2{
         font-size: 2em;
+    }
+
+    #card p{
+        font-size: 1em;
+    }
+
+    .dead {
+        color: red;
+    }
+
+    .alive {
+        color: greenyellow;
+    }
+
+    .unknown {
+        color: grey;
     }
 </style>
 

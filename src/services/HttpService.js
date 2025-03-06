@@ -11,7 +11,7 @@ export async function getCharacters() {
         const response = await api.get('character');
         return response.data
     } catch (error) {
-        console.error('Erro ao obter personagens:', error);
+        console.error('Error getting characters:', error);
         throw error;
     }
 }
@@ -21,7 +21,17 @@ export async function getCharacter(id) {
         const response = await api.get(`characters/${id}`)
         return response.data
     } catch (error) {
-        console.error('Erro ao obter personagem', error);
+        console.error('Error getting character', error);
+        throw error;
+    }
+}
+
+export async function changePage(num) {
+    try {
+        const response = await api.get(`character/?page=${num}`)
+        return response.data
+    } catch (error){
+        console.error('Error change page', error);
         throw error;
     }
 }

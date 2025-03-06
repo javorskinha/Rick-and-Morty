@@ -1,6 +1,8 @@
 <template>
-    <div v-for="people in personagens" :key="people.id">
-        <CardComponent :src="people.image" :title="people.name" :status="people.status" :species="people.species" :gender="people.gender" :origin="people.origin.name" />
+    <div>
+        <div v-for="people in personagens" :key="people.id">
+            <CardComponent :src="people.image" :title="people.name" :status="people.status" :species="people.species" :gender="people.gender" :origin="people.origin.name" />
+        </div>
     </div>
 </template>
 
@@ -23,6 +25,7 @@ import CardComponent from "./CardComponent.vue";
 </script>
 
 <style scoped>
+
 </style>
 
 
