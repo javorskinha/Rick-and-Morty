@@ -26,7 +26,7 @@ import { RouterLink, RouterView } from 'vue-router'
   }
 
   .img{
-    margin: 1.5em;
+    margin: 0.5em;
     justify-content: space-between;
   }
 

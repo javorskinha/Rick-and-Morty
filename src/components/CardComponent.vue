@@ -88,7 +88,7 @@ watch (() => props.status,
     }
 
     .alive {
-        color: greenyellow;
+        color: var(--color-green);
     }
 
     .unknown {

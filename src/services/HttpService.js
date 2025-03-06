@@ -6,9 +6,9 @@ const api = axios.create ({
     baseURL: baseURL
 });
 
-export async function getCharacters() {
+export async function getCharacters(url = 'character/?page=1') {
     try {
-        const response = await api.get('character');
+        const response = await api.get(url);
         return response.data
     } catch (error) {
         console.error('Error getting characters:', error);
@@ -25,6 +25,8 @@ export async function getCharacter(id) {
         throw error;
     }
 }
+
+
 
 export async function changePage(num) {
     try {

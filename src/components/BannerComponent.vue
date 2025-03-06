@@ -15,5 +15,7 @@ const props = defineProps ({
     img{
         max-width: 100%;
         height: auto;
+        border-bottom: solid 3px var(--color-black); 
+        box-shadow: 0.1px 20px 20px var(--color-black);
     }
 </style>
