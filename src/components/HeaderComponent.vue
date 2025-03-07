@@ -2,7 +2,7 @@
     <div id="header">
       <section class="img">
         <img src="../../public/images/rick-and-morty-icon.png" alt="">
-        <img src="../../public/images/rick-and-morty.png" alt="">
+
       </section>
       <section class="navbar">
         <nav>
@@ -14,12 +14,16 @@
 </template>
 
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink } from 'vue-router'
 </script>
 
 <style scoped>
   #header {
+    height: 50em;
     background-color: var(--color-drak-grey);
+    background-image: url('../../public/images/rick-and-morty-home.jpg');
+    background-position: 0;
+    background-size: cover;
     display: flex;
     justify-content: space-between;
     align-items: baseline;

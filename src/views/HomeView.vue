@@ -1,6 +1,5 @@
 <template>
     <div id="home">
-        <BannerComponent src="../../public/images/rick-and-morty-home.jpg" alt="rick and morty image"/>
         <h1>Wubba Lubba Dub Dub!</h1>
         <div class="container">
             <ShowCharacters class="cards"/>
@@ -9,7 +8,6 @@
 </template>
 
 <script setup>
-import BannerComponent from '@/components/BannerComponent.vue';
 import ShowCharacters from '@/components/ShowCharacters.vue';
 
 </script>

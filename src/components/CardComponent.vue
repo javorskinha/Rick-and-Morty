@@ -2,7 +2,7 @@
     <div id="card">
         <div id="card-content">
             <img :src="src" :alt="alt">
-            <div>
+            <div class="card-text">
                 <h2>{{ title }}</h2>
                 <p :class="styleClass">{{ status }}</p>
                 <p>{{ species }} / {{ gender }}</p>
@@ -49,12 +49,16 @@ watch (() => props.status,
         align-items: center;
         margin: 1em auto;
         width: 100%;
+        position: relative;
     }
 
     #card-content {
         display: flex;
         align-items: center;
-        background-color: var(--color-grey);
+        background-image: url('../../public/images/portal.png');
+        background-position: 0;
+        background-repeat: no-repeat;
+        background-color: var(--color-drak-grey);
         width: 30em;
         height: 15em;
         justify-content: space-around;
@@ -64,23 +68,30 @@ watch (() => props.status,
     }
 
     #card img{
-        width: 13em;
+        width: 10em;
         border-radius: 100px;
+        position: absolute;
+        left: 59px
     }
 
-    #card h2, p {
+    .card-text {
         font-family: var(--font-main);
         font-weight: 700;
         color: var(--color-light-green);
         padding: 5px;
+        position: absolute;
+        left: 55%;
+        margin: 15px;
     }
 
     #card h2{
         font-size: 2em;
+        margin: 8px 0 8px 0;
     }
 
     #card p{
         font-size: 1em;
+        margin: 8px 0 8px 0;
     }
 
     .dead {
