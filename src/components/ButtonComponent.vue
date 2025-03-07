@@ -12,13 +12,13 @@ const props = defineProps({
 
 <style scoped>
     button{
-        width: 30%;
-        margin: 10px 10px 10px 20px;
+        width: 10%;
+        margin: 40px;
         font-family: var(--font-main);
         font-weight: 700;
         font-size: 90%;
-        border: solid 3px var(--color-black);
-        border-radius: 5px;
+        border: none;
+        border-radius: 8px;
         color: var(--color-light-green);
         background-color: var(--color-drak-grey);
     }

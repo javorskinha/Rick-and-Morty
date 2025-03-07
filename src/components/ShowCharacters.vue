@@ -1,9 +1,11 @@
 <template>
     <div>
-        <div v-for="people in personagens" :key="people.id">
-            <CardComponent :src="people.image" :title="people.name" :status="people.status" :species="people.species" :gender="people.gender" :origin="people.origin.name" />
+        <div class="cards">
+            <div v-for="people in personagens" :key="people.id">
+                <CardComponent :src="people.image" :title="people.name" :status="people.status" :species="people.species" :gender="people.gender" :origin="people.origin.name" />
+            </div>
         </div>
-        <div class="button">
+        <div id="button">
             <ButtonComponent @click="prevPage && getPersonagens(prevPage)" name="PREVOUS"/>
             <ButtonComponent @click="nextPage && getPersonagens(nextPage)" name="NEXT"/>
         </div>
@@ -34,11 +36,14 @@ import ButtonComponent from "./ButtonComponent.vue"
 </script>
 
 <style scoped>
-    .button{
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        gap: 1em;
+    }
+
+    #button{
         display: flex;
         justify-content: center;
     }
 </style>
-
-
-@click="prevPage && getPersonagens(prevPage)"

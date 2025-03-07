@@ -38,7 +38,7 @@ const photos = ref([
     #footer{
         display: flex;
         flex-direction: column;
-        background-color: var(--color-drak-grey);
+        background-color: var(--color-grey);
         align-items: center;
         border: solid 3px var(--color-black);
     }

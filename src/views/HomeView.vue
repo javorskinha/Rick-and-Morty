@@ -1,29 +1,30 @@
 <template>
     <div id="home">
         <h1>Wubba Lubba Dub Dub!</h1>
+        <VideoComponent src="https://www.youtube.com/embed/qRdzw2Osl8o?si=8wPkgabKQDaDK5df"/>
         <div class="container">
-            <ShowCharacters class="cards"/>
+            <ShowCharacters />
         </div>
     </div>
 </template>
 
 <script setup>
 import ShowCharacters from '@/components/ShowCharacters.vue';
-
+import VideoComponent from '@/components/VideoComponent.vue';
 </script>
 
 <style scoped>
     #home{
-        background-color: var(--color-medium-grey);
+        background-color: var(--color-light-green);
     }
 
     #home h1{
-        color: var(--color-light-green);
+        color: var(--color-drak-grey);
         font-family: var(--font-main);
         font-weight: 900;
         font-size: 4em;
         text-align: center;
-        margin: 1.2em;
+        padding: 1em;
         text-shadow: 3px 3px 10px var(--color-black);
     }
 
@@ -32,10 +33,5 @@ import ShowCharacters from '@/components/ShowCharacters.vue';
         margin: auto;
     }
 
-    .cards{
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-        gap: 1em;
-    }
 </style>
 

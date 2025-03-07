@@ -49,7 +49,7 @@ watch (() => props.status,
         align-items: center;
         margin: 1em auto;
         width: 100%;
-        position: relative;
+        
     }
 
     #card-content {
@@ -65,13 +65,14 @@ watch (() => props.status,
         border: solid 1px var(--color-drak-grey);
         border-radius: 10px;
         box-shadow: 2px 2px 10px var(--color-black);
+        position: relative;
     }
 
     #card img{
         width: 10em;
         border-radius: 100px;
         position: absolute;
-        left: 59px
+        left: 50px
     }
 
     .card-text {
