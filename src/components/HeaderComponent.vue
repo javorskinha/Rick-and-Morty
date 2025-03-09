@@ -1,12 +1,12 @@
 <template>
     <div id="header">
-      <nav>
-          <RouterLink to="/" class="nav  home">Home</RouterLink>
-          <RouterLink to="/about" class="nav">About</RouterLink>
-          <a href="" class="nav">Characters</a>
-          <RouterLink to="/locations" class="nav">Locations</RouterLink>
-          <a href="" class="nav">Episodes</a>
-      </nav>
+        <nav>
+            <RouterLink to="/" class="nav  home">Home</RouterLink>
+            <RouterLink to="/about" class="nav">About</RouterLink>
+            <RouterLink to="/characters" class="nav">Characters</RouterLink>
+            <RouterLink to="/locations" class="nav">Locations</RouterLink>
+            <RouterLink to="/episodes" class="nav">Episodes</RouterLink>
+        </nav>
     </div>
 </template>
 
@@ -16,9 +16,10 @@ import { RouterLink } from 'vue-router'
 
 <style scoped>
   #header {
-    height: 35em;
-    background-color: var(--color-drak-grey);
-    background-image: url('../../public/images/rick-and-morty-home.jpg');
+    height: 40em;
+    background: 
+    linear-gradient(to top, rgba(3, 3, 3, 0.945), rgba(255, 255, 255, 0) 60%),
+      url('../../public/images/rick-and-morty-home.jpg');
     background-position: 0;
     background-size: cover;
     position: relative;
@@ -26,22 +27,22 @@ import { RouterLink } from 'vue-router'
 
   nav {
     position: absolute;
-    bottom: 15px;
+    bottom: 25px;
   }
 
   .nav {
     color: var(--color-light-green);
     text-decoration: none;
-    font-family: var(--font-main);
-    font-weight: 700;
+    font-family: var(--font-header);
+    font-weight: 500;
     font-size: 1.5rem;
-    padding: 0 1em 0 1em;
+    padding: 2em;
   }
 
   .nav:hover {
     color: var(--color-green);
     text-decoration: underline;
   }
-
+  
 </style>
 

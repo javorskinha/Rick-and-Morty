@@ -1,5 +1,7 @@
 <template>
-    <BannerComponent src="../../public/images/rick-and-morty-about.png" alt="rick and morty image"/>
+    <div class="father">
+        <BannerComponent src="../../public/images/rick-and-morty-about.jpg" alt="rick and morty image"/>
+    </div>
 </template>
 
 <script setup>

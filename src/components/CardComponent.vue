@@ -56,15 +56,16 @@ watch (() => props.status,
         display: flex;
         align-items: center;
         background-image: url('../../public/images/portal.png');
-        background-position: 0;
+        background-size: 12em;
+        background-position: 35px;
         background-repeat: no-repeat;
-        background-color: var(--color-drak-grey);
+        background-color: var(--color-dark-grey);
         width: 30em;
         height: 15em;
         justify-content: space-around;
-        border: solid 1px var(--color-drak-grey);
+        border: solid 1px var(--color-dark-grey);
         border-radius: 10px;
-        box-shadow: 2px 2px 10px var(--color-black);
+        box-shadow: 4px 4px 10px var(--color-green);
         position: relative;
     }
 
@@ -87,12 +88,13 @@ watch (() => props.status,
 
     #card h2{
         font-size: 2em;
-        margin: 8px 0 8px 0;
+        margin: 4px 0 4px 0;
     }
 
     #card p{
         font-size: 1em;
         margin: 8px 0 8px 0;
+        padding: 0;
     }
 
     .dead {

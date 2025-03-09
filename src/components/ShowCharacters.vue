@@ -13,7 +13,7 @@
 </template>
 
 <script setup>
-import { onMounted, ref, defineProps } from "vue";
+import { onMounted, ref } from "vue";
 import { getCharacters } from "@/services/HttpService.js";
 import CardComponent from "./CardComponent.vue";
 import ButtonComponent from "./ButtonComponent.vue"

@@ -13,9 +13,7 @@ const props = defineProps ({
 
 <style scoped>
     img{
-        max-width: 100%;
+        max-width: 60%;
         height: auto;
-        border-bottom: solid 3px var(--color-black); 
-        box-shadow: 0.1px 20px 20px var(--color-black);
     }
 </style>
