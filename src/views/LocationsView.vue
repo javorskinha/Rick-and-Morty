@@ -2,14 +2,15 @@
     <div class="father">
         <div class="intro">
             <section>
-                <h1>Loren</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error aspernatur laborum incidunt dignissimos laboriosam nobis, consectetur temporibus corporis accusantium iure provident! Quaerat inventore blanditiis a nam, voluptatem sequi adipisci minus.</p>
+                <h1>List of Locations</h1>
+                <p>These are the known locations <span>(until now)</span></p>
             </section>
-            <section><img src="../../public/images/location-img.jpg" alt=""></section>
         </div>
         <div>
-            <div v-for="local in locations" :key="local.id">
-                <ListComponent :name="local.name" :data-one="local.type" :data-two="local.dimension"/> 
+            <div class="list">
+                <div v-for="local in locations" :key="local.id">
+                    <ListComponent nameName="Name:" :name="local.name" dataOneData="Type:" :data-one="local.type" dataTwoData="Dimension" :data-two="local.dimension"/>
+                </div>
             </div>
             <div id="button">
                 <ButtonComponent @click="prevPage && getLocals(prevPage)" name="PREVOUS"/>
@@ -43,11 +44,20 @@ import { ref, onMounted } from 'vue';
 <style scoped>
     .intro{
         display: flex;
+        justify-content: center;
     }
 
     img {
         width: 30%;
         height: auto;
+    }
+
+    .list {
+        background-image: url(../../public/images/place.jpg);
+    }
+
+    span{
+        font-size: 0.7em;
     }
 </style>
 

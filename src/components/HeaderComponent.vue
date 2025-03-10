@@ -2,7 +2,6 @@
     <div id="header">
         <nav>
             <RouterLink to="/" class="nav  home">Home</RouterLink>
-            <RouterLink to="/about" class="nav">About</RouterLink>
             <RouterLink to="/characters" class="nav">Characters</RouterLink>
             <RouterLink to="/locations" class="nav">Locations</RouterLink>
             <RouterLink to="/episodes" class="nav">Episodes</RouterLink>

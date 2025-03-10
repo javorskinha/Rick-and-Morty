@@ -41,9 +41,4 @@ import ButtonComponent from "./ButtonComponent.vue"
         grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
         gap: 1em;
     }
-
-    #button{
-        display: flex;
-        justify-content: center;
-    }
 </style>

@@ -44,4 +44,21 @@ import FooterComponent from './components/FooterComponent.vue';
     text-align: justify;
   }
 
+  .list {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 2em;
+    border: solid 2px var(--color-black);
+    border-radius: 15px;
+    padding: 2em;
+    background-color: rgba(230, 216, 216, 0.822);
+    background-position: 55%;
+    background-size: cover;
+    background-blend-mode: overlay;
+  }
+
+  #button{
+      display: flex;
+      justify-content: center;
+  }
 </style>
