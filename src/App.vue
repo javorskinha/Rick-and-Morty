@@ -23,10 +23,10 @@ import FooterComponent from './components/FooterComponent.vue';
     height: auto;
     border-radius: 15px;
     border: solid 1px var(--color-medium-green);
+    font-family: var(--font-main);
   }
 
-  h1, li {
-    font-family: var(--font-main);
+  li {
     color: var(--color-dark-grey);
   }
 
@@ -34,13 +34,19 @@ import FooterComponent from './components/FooterComponent.vue';
     font-weight: 900;
     font-size: 4em;
     text-align: center;
-    padding: 0.5em;
+    padding-top: 0.5em;
+  }
+
+  h2, h3 {
+    font-weight: 800;
+    font-size: 2em;
+    padding-top: 0.5em;
   }
 
   p{
     font-weight: 500;
     font-size: 1.5em;
-    padding: 1em;
+    padding: 0.5em;
     text-align: justify;
   }
 

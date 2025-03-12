@@ -1,6 +1,6 @@
 <template>
     <div id="video">
-        <iframe width="610" height="365" :src="src" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="610" height="365" :src="src" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="iframe"></iframe>
     </div>
 </template>
 
@@ -16,6 +16,10 @@ const props = defineProps({
     #video{
         display: flex;
         justify-content: center;
+    }
+
+    .iframe{
+        border: solid 10px var(--color-dark-green);
     }
 </style>
 

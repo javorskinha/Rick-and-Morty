@@ -35,12 +35,41 @@ import { RouterLink } from 'vue-router'
     font-family: var(--font-header);
     font-weight: 500;
     font-size: 1.5rem;
-    padding: 2em;
+    margin: 1.5em;
+    padding: 0.5em;
+    border: solid 3px var(--color-black);
+    border-radius: 10px;
+    position: relative;
+    transition: 0.3s ease all;
+    z-index: 1;
   }
 
-  .nav:hover {
-    color: var(--color-green);
-    text-decoration: underline;
+  .nav::before{
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    opacity: 0;
+    content:'';
+    background-color: #00FF00;
+    z-index: -1;
+  }
+
+  .nav:hover, .nav:focus {
+    color: var(--color-black);
+  }
+
+  .nav:hover:before, .nav:focus:before {
+	  transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity:1;
+}
+
+  .nav:active {
+    transform: scale(0.9);
   }
   
 </style>
