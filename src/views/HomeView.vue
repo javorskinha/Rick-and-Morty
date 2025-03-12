@@ -51,6 +51,16 @@
                 <div>
                     <h3>Rick Sanchez</h3>
                     <p> A genius scientist and alcoholic whose inventions and experiments serve as the basis for the episodes. The grandfather of Morty Smith and Summer Smith, and the father of Beth. Rick was absent from the family for years, until he finally returned before the Pilot episode to live with the Smith family, much to the disapproval of Jerry. He currently resides in the garage of the Smith house where his entire laboratory is based. Here, he builds new inventions, travels to other dimensions, and tests things out on forms of alien life.</p>
+                    <h3>Morty Smith</h3>
+                    <p>Rick's impressionable and socially awkward teenage grandson who is often dragged along on his grandfather's escapades. Morty is a wimpy and nervous wreck who desperately tries to keep his sanity when taken on the bizarre and terrifyingly mind-bending adventures that Rick takes him on, which is already big enough of a problem as he already struggles to fit in at his own high school.</p>
+                    <h3>Jerry Smith</h3>
+                    <p>Morty's insecure father, whose disapproval of Rick's influence on Morty only deepens his marital troubles with Beth. Jerry constantly finds himself to be in a failing marriage with his wife as they always argue and never express the love for each other that most parents do.</p>
+                    <h3>Summer Smith </h3>
+                    <p>Morty's angst-ridden older sister who occasionally joins Rick on his adventures. She only cares about her friends and social life at school and is easily annoyed by her family, though she sometimes becomes jealous of Morty's relationship with Rick.</p>
+                    <h3>Beth Smith</h3>
+                    <p>Morty's holier-than-thou mother who is a cardiac surgeon for horses. Beth seems to have problems in her marriage with Jerry and usually considers leaving him for another guy.</p>
+
+                    <p>If you want know all the characters <a href="/characters">click here</a></p>
                 </div>
             </div>
         </div>
@@ -100,6 +110,10 @@ import VideoComponent from '@/components/VideoComponent.vue';
 
     .video {
         padding: 1em;
+    }
+
+    a {
+        color: var(--color-green);
     }
 </style>
 
