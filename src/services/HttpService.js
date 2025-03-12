@@ -36,9 +36,6 @@ export async function getEpisodes(url = '/episode?page=1') {
     }
 }
 
-
-
-
 export async function getCharacter(id) {
     try {
         const response = await api.get(`characters/${id}`)

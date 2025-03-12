@@ -73,7 +73,7 @@ watch (() => props.status,
         width: 10em;
         border-radius: 100px;
         position: absolute;
-        left: 50px
+        left: 50px;
     }
 
     .card-text {

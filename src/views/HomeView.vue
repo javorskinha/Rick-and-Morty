@@ -46,6 +46,13 @@
                     <img src="../../public/images/jesus-rick.jpg" alt="">
                 </div>
             </div>
+            <div>
+                <h2>Main Cast</h2>
+                <div>
+                    <h3>Rick Sanchez</h3>
+                    <p> A genius scientist and alcoholic whose inventions and experiments serve as the basis for the episodes. The grandfather of Morty Smith and Summer Smith, and the father of Beth. Rick was absent from the family for years, until he finally returned before the Pilot episode to live with the Smith family, much to the disapproval of Jerry. He currently resides in the garage of the Smith house where his entire laboratory is based. Here, he builds new inventions, travels to other dimensions, and tests things out on forms of alien life.</p>
+                </div>
+            </div>
         </div>
     </div>
 </template>
