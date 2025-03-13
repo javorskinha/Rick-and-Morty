@@ -1,7 +1,6 @@
 <template>
     <div id="card">
         <div id="card-content">
-            <div class="favorite-marker" :class="styleFavorite"></div>
             <img :src="src" :alt="alt">
             <div class="card-text">
                 <h2>{{ title }}</h2>
@@ -14,7 +13,7 @@
 </template>
 
 <script setup>
-import { ref, defineProps, watch } from 'vue';
+import { ref, defineProps, watch, computed } from 'vue';
 
 const props = defineProps ({
     src: String,
@@ -26,7 +25,7 @@ const props = defineProps ({
     origin: String
 })
 
-const styleClass = ref ('')
+const styleClass = ref ('');
 
 watch (() => props.status, 
     (newStatus) => {
@@ -110,15 +109,5 @@ watch (() => props.status,
         color: grey;
     }
 
-    .favorite-marker{
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 0;
-        height: 0;
-        border-left: 90px solid transparent;
-        border-top: 90px solid var(--color-green);
-        border-radius: 0 10px 0 0;
-    }
 </style>
 

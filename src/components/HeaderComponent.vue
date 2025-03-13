@@ -5,6 +5,7 @@
             <RouterLink to="/characters" class="nav">Characters</RouterLink>
             <RouterLink to="/locations" class="nav">Locations</RouterLink>
             <RouterLink to="/episodes" class="nav">Episodes</RouterLink>
+            <RouterLink to="/favorites" class="nav">Favorites</RouterLink>
         </nav>
     </div>
 </template>
