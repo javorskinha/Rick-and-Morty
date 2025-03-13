@@ -1,7 +1,7 @@
 <template id="app">
-  <div>
+  <div id="main">
     <HeaderComponent/>
-    <RouterView/>
+    <div ><RouterView/></div>
     <FooterComponent />
   </div>
 </template>
@@ -12,6 +12,10 @@ import FooterComponent from './components/FooterComponent.vue';
 </script>
 
 <style>
+  #main{
+    background: linear-gradient(to bottom, var(--color-light-green), var(--color-green));
+  }
+
   .father{
     display: grid;
     place-self: center;

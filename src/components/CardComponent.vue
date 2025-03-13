@@ -1,6 +1,7 @@
 <template>
     <div id="card">
         <div id="card-content">
+            <div class="favorite-marker" :class="styleFavorite"></div>
             <img :src="src" :alt="alt">
             <div class="card-text">
                 <h2>{{ title }}</h2>
@@ -49,7 +50,7 @@ watch (() => props.status,
         align-items: center;
         margin: 1em auto;
         width: 100%;
-        
+        position: relative;
     }
 
     #card-content {
@@ -107,6 +108,17 @@ watch (() => props.status,
 
     .unknown {
         color: grey;
+    }
+
+    .favorite-marker{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-left: 90px solid transparent;
+        border-top: 90px solid var(--color-green);
+        border-radius: 0 10px 0 0;
     }
 </style>
 
