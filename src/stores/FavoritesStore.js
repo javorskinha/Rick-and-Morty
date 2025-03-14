@@ -13,11 +13,12 @@ export const useFavoritesStore = defineStore('favorites', ()=> {
 
     const favorites = ref(loadFavorites());
 
-    function turnFav(item) {
-        if (favorites.value.includes(item)){
-            favorites.value = favorites.value.filter((fav) => fav !== item);
+    function turnFav(card) {
+        const index = favorites.value.findIndex((i) => i.id === card.id)
+        if (index === -1){
+            favorites.value = [...favorites.value, card];
         } else {
-            favorites.value.push(item);
+            favorites.value.splice(index, 1);
         }
     };
 
@@ -27,21 +28,3 @@ export const useFavoritesStore = defineStore('favorites', ()=> {
 
     return { favorites, turnFav};
 }, {persist:true})
-
-/*import { defineStore } from 'pinia';
-
-export const useFavoritesStore = defineStore('favorites', {
-    state: () => ({
-        favorites: []
-    }),
-    actions: {
-        turnFav(character) {
-            const index = this.favorites.findIndex(fav => fav.id === character.id);
-            if (index !== -1) {
-                this.favorites.splice(index, 1); // Remove se já estiver nos favoritos
-            } else {
-                this.favorites.push(character); // Adiciona o objeto inteiro
-            }
-        }
-    }
-});

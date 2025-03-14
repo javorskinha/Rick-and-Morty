@@ -54,7 +54,7 @@ import { useFavoritesStore } from '@/stores/FavoritesStore'
     };
 </script>
 
-<style scoped>
+<style>
     .cards{
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
