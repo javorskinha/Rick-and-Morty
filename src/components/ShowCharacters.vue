@@ -53,33 +53,3 @@ import { useFavoritesStore } from '@/stores/FavoritesStore'
         favoritesStore.turnFav(people);
     };
 </script>
-
-<style>
-    .cards{
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-        gap: 1em;
-    }
-
-    .card{
-        position: relative;
-    }
-
-    .favorite-marker{
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 3.5em;
-        height: 3.5em;
-        z-index: 1;
-        background-repeat: no-repeat;
-    }
-
-    .favorite-true {
-        background-image: url(../../public/images/favorite-true.png);
-    }
-
-    .favorite-false {
-        background-image: url(../../public/images/favorite-false.png);
-    }
-</style>
