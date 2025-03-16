@@ -22,9 +22,5 @@ export const useFavoritesStore = defineStore('favorites', ()=> {
         }
     };
 
-    watch (favorites, (newValue) => {
-        localStorage.setItem('favorites', JSON.stringify(newValue));
-    }, {deep: true});
-
     return { favorites, turnFav};
 }, {persist:true})

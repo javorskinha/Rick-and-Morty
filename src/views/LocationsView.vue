@@ -3,7 +3,7 @@
         <div class="intro">
             <section>
                 <h1>List of Locations</h1>
-                <p>These are the known locations <span>(until now)</span></p>
+                <p>We already know that the series takes place in a multitude of places, dimensions and planets, here we have a list of the locations already known in the series.<span>(until now)</span></p>
             </section>
         </div>
         <div>
@@ -13,8 +13,9 @@
                 </div>
             </div>
             <div id="button">
-                <ButtonComponent @click="prevPage && getLocals(prevPage)" name="PREVOUS"/>
-                <ButtonComponent @click="nextPage && getLocals(nextPage)" name="NEXT"/>
+                <ButtonComponent @click="prevPage && getLocals(prevPage) && num--" name="PREVOUS"/>
+                <p>{{ num }} of 7</p>
+                <ButtonComponent @click="nextPage && getLocals(nextPage) && num++" name="NEXT"/>
             </div>
         </div>
     </div>
@@ -29,6 +30,7 @@ import { ref, onMounted } from 'vue';
     const locations = ref([])
     const nextPage = ref('');
     const prevPage = ref('');
+    const num = ref(1);
 
     async function getLocals(url) {
         const resultado = await getLocations(url)

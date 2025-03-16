@@ -1,7 +1,7 @@
 <template>
     <div class="father">
-        <h1>Your favorites section is here</h1>
-        <div class="cards">
+        <h1>Your favorites section</h1>
+        <div class="card">
             <ShowFavorites />
         </div>
     </div>

@@ -1,22 +1,23 @@
 <template>
     <div>
         <div class="cards">
-            <div v-for="people in personagens" :key="people.id">
+            <div v-for="person in allCharacters" :key="person.id">
                 <div class="card">
-                    <div @click="turnFavorite(people)" class="favorite-marker" :class="isFavorite(people) ? 'favorite-true' : 'favorite-false '"></div>
+                    <div @click="turnFavorite(person)" class="favorite-marker" :class="isFavorite(person) ? 'favorite-true' : 'favorite-false '"></div>
                     <CardComponent 
-                    :src="people.image" 
-                    :title="people.name" 
-                    :status="people.status" 
-                    :species="people.species" 
-                    :gender="people.gender" 
-                    :origin="people.origin.name" />
+                    :src="person.image" 
+                    :title="person.name" 
+                    :status="person.status" 
+                    :species="person.species" 
+                    :gender="person.gender" 
+                    :origin="person.origin.name" />
                 </div>
             </div>
         </div>
         <div id="button">
-            <ButtonComponent @click="prevPage && getPersonagens(prevPage)" name="PREVOUS"/>
-            <ButtonComponent @click="nextPage && getPersonagens(nextPage)" name="NEXT"/>
+            <ButtonComponent @click="prevPage && gatAllCharacters(prevPage) & num --" name="PREVOUS"/>
+            <p>{{ num }} of 42</p>
+            <ButtonComponent @click="nextPage && gatAllCharacters(nextPage) && num++" name="NEXT"/>
         </div>
     </div>
 </template>
@@ -28,28 +29,29 @@ import CardComponent from "./CardComponent.vue";
 import ButtonComponent from "./ButtonComponent.vue"
 import { useFavoritesStore } from '@/stores/FavoritesStore'
 
-    const personagens = ref([]);
+    const allCharacters = ref([]);
     const nextPage = ref('');
     const prevPage = ref('');
     const favoritesStore = useFavoritesStore();
+    const num = ref(1)
 
-    async function getPersonagens(url) {
+    async function gatAllCharacters(url) {
         const resultado = await getCharacters(url)
 
         console.log(resultado)
 
-        personagens.value = resultado.results;
+        allCharacters.value = resultado.results;
         nextPage.value = resultado.info.next;
         prevPage.value = resultado.info.prev;
     }
 
-    onMounted(getPersonagens);
+    onMounted(gatAllCharacters);
 
-    const isFavorite = (people)=>{
-        return favoritesStore.favorites.some(fav => fav.id === people.id);
+    const isFavorite = (person)=>{
+        return favoritesStore.favorites.some(fav => fav.id === person.id);
     }
 
-    function turnFavorite(people) {
-        favoritesStore.turnFav(people);
+    function turnFavorite(person) {
+        favoritesStore.turnFav(person);
     };
 </script>

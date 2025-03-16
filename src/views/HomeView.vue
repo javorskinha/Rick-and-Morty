@@ -24,13 +24,16 @@
             </div>
             <h3>Theme Song</h3>
             <hr>
-            <p>The Theme Song[1] is the song that plays over the title sequence that occurs at the beginning of almost every episode of Rick and Morty. The intro shows scenes from episodes of the show as well as some other scenes that were made only for the intro. The intro changes with different scenes each season except for the first and last scenes.</p>
+            <p>The Theme Song is the song that plays over the title sequence that occurs at the beginning of almost every episode of Rick and Morty. The intro shows scenes from episodes of the show as well as some other scenes that were made only for the intro. The intro changes with different scenes each season except for the first and last scenes.</p>
+            <div>
+                <VideoComponent src="https://www.youtube.com/embed/wh10k2LPZiI?si=XD1rkoTAuCHcg3tq" class="video"/>
+            </div>
             <div class="grid">
                 <img src="../../public/images/poster-img.jpg" alt="" class="banner">
                 <div>
                     <h2>About</h2>
                     <hr>
-                    <p>The show's first season consists of 11 twenty-two minute episodes. After airing the first six episodes, Adult Swim renewed the show for a second season, consisting of 10 twenty-two minute episodes. In 2015, the show was renewed for a third season, consisting of 10 twenty-two minute episodes that aired in the summer of 2017. During the fall of 2019, Rick and Morty returned with a fourth season airing ten episodes with the first half of the season being aired in 2019 and the second half after new years.[1] The series aired its fifth season within the summer of 2021 and its sixth season in the winter of 2022. As of the winter of 2023, the series has finished airing its seventh season.[2] The eigth season of the series is slated to premiere in 2025.</p>
+                    <p>The show's first season consists of 11 twenty-two minute episodes. After airing the first six episodes, Adult Swim renewed the show for a second season, consisting of 10 twenty-two minute episodes. In 2015, the show was renewed for a third season, consisting of 10 twenty-two minute episodes that aired in the summer of 2017. During the fall of 2019, Rick and Morty returned with a fourth season airing ten episodes with the first half of the season being aired in 2019 and the second half after new years. The series aired its fifth season within the summer of 2021 and its sixth season in the winter of 2022. As of the winter of 2023, the series has finished airing its seventh season. The eigth season of the series is slated to premiere in 2025.</p>
                 </div>
             </div>
             <div class="grid">
