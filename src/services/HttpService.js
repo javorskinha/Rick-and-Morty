@@ -40,7 +40,7 @@ export async function getEpisodes(url = '/episode?page=1') {
 //usar depois pra pegar card e por no home
 export async function getCharacter(id) {
     try {
-        const response = await api.get(`characters/${id}`)
+        const response = await api.get(`/character/${id}`)
         return response.data
     } catch (error) {
         console.error('Error getting character', error);

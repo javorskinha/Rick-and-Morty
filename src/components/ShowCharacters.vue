@@ -35,7 +35,7 @@ import { useFavoritesStore } from '@/stores/FavoritesStore'
     const favoritesStore = useFavoritesStore();
     const num = ref(1)
 
-    async function gatAllCharacters(url) {
+    async function getAllCharacters(url) {
         const resultado = await getCharacters(url)
 
         console.log(resultado)
@@ -45,7 +45,7 @@ import { useFavoritesStore } from '@/stores/FavoritesStore'
         prevPage.value = resultado.info.prev;
     }
 
-    onMounted(gatAllCharacters);
+    onMounted(getAllCharacters);
 
     const isFavorite = (person)=>{
         return favoritesStore.favorites.some(fav => fav.id === person.id);
